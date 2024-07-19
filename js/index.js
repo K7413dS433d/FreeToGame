@@ -52,7 +52,7 @@ function constructDetails(data) {
   $("#status").html(
     `status: <span class="badge text-bg-info"> ${data.status}</span>`
   );
-  $("#description").html(`status: ${data.description}`);
+  $("#description").html(`${data.description}`);
   $("#game-link").attr("href", data.game_url);
 }
 
