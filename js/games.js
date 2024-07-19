@@ -36,8 +36,7 @@ export class Games {
         (iterator) => `
         <div class="col-md-6 col-lg-4 col-xl-3" onclick=clickable("${
           iterator.id
-        }") data-bs-toggle="modal"
-      data-bs-target="#game-modal">
+        }") >
           <div class="card">
             <div>
               <img
@@ -79,21 +78,5 @@ export class Games {
     return data;
   }
 
-  constructDetails(data) {
-    console.log("sss");
-    $("#image").attr("src", data.thumbnail);
-    $("#image").attr("alt", data.title + "game");
-    $("#game-name").html(`Title: ${data.title}`);
-    $("#category").html(
-      `Category: <span class="badge text-bg-info"> ${data.genre}</span>`
-    );
-    $("#platform").html(
-      `platform: <span class="badge text-bg-info">${data.platform}</span>`
-    );
-    $("#status").html(
-      `status: <span class="badge text-bg-info"> ${data.status}</span>`
-    );
-    $("#description").html(`status: ${data.description}`);
-    $("#game-link").attr("href", data.game_url);
-  }
+ 
 }

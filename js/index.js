@@ -10,7 +10,7 @@ function preloading(callFunction) {
   $(".preloader").fadeOut(500);
 }
 
-//load th page
+// load th page
 $(document).ready(async function () {
   preloading(async function () {
     try {
@@ -39,9 +39,27 @@ $(".navbar-nav li").on("click", async function () {
 });
 
 //card details
+function constructDetails(data) {
+  $("#image").attr("src", data.thumbnail);
+  $("#image").attr("alt", data.title + "game");
+  $("#game-name").html(`Title: ${data.title}`);
+  $("#category").html(
+    `Category: <span class="badge text-bg-info"> ${data.genre}</span>`
+  );
+  $("#platform").html(
+    `platform: <span class="badge text-bg-info">${data.platform}</span>`
+  );
+  $("#status").html(
+    `status: <span class="badge text-bg-info"> ${data.status}</span>`
+  );
+  $("#description").html(`status: ${data.description}`);
+  $("#game-link").attr("href", data.game_url);
+}
+
 window.clickable = function (id) {
   preloading(async () => {
     const data = await games.getGameInfo(Number(id));
-    games.constructDetails(data);
+    constructDetails(data);
+    $("#game-modal").modal("show");
   });
 };

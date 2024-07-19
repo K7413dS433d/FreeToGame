@@ -76,9 +76,11 @@ a.active {
     -o-transform: rotate(360deg);
   }
 }
+
 .preloader {
   background-color: #272b30e3;
   display: none;
+  z-index: 10000;
 }
 
 .preloader .loading {
@@ -192,4 +194,8 @@ a.active {
 #description {
   line-height: 21px !important ;
   font-size: 14px !important;
+}
+
+.btn-close {
+  background-image: url("./../assets/icons/close_btn.svg") ;
 }
