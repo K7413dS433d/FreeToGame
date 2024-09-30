@@ -120,6 +120,13 @@ a.active {
   -o-transition: 0.5s;
 }
 
+@media (max-width: 992px) {
+  .card {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+  }
+}
+
 .card:hover {
   cursor: pointer;
   filter: grayscale(0);
@@ -197,5 +204,5 @@ a.active {
 }
 
 .btn-close {
-  background-image: url("./../assets/icons/close_btn.svg") ;
+  background-image: url("./../assets/icons/close_btn.svg");
 }
