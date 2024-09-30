@@ -27,4 +27,6 @@ Check out the live demo of the FreeToGame website [here](https://free-to-game-pe
 
 ## Video
 
-Watch a video walkthrough of the FreeToGame website [here](#).
+Watch a video walkthrough of the FreeToGame website
+
+https://github.com/user-attachments/assets/2d37023b-d2b4-4e15-9853-4181b71af074
